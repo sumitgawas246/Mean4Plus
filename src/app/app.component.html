@@ -1,0 +1,32 @@
+<div>
+<h1>Out MongoDB is working!</h1>
+
+<ul *ngFor="let user of ExpenseData">
+  <li > Rent: {{ user.Rent }}</li>
+  <li > Maid: {{ user.Maid }}</li>
+  <li > Travelling: {{ user.Travelling }}</li>
+  <li > Grocessary: {{ user.Grocessary }}</li>
+  <li > Investment: {{ user.Investment }}</li>
+  <li > PersonalExpense: {{ user.PersonalExpense }}</li>  
+</ul>
+</div>
+
+<div>
+  <form>
+    SSN: 
+    <input type="number" max="9" placeholder="Enter SSN" required>
+    <input type="submit" name="Submit">
+  </form>
+</div>
+<div>
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [legend]="true"
+      [colors]="pieChartColor"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+</div>
